@@ -8,19 +8,25 @@
 <body>
   <div class="container">
     <h2>Register</h2>
-    <input id="register-username" placeholder="Username">
-    <input id="register-password" type="password" placeholder="Password">
-    <button id="register-btn">Register</button>
+    <form id="register-form">
+      <input id="register-username" placeholder="Username">
+      <input id="register-password" type="password" placeholder="Password">
+      <button type="submit">Register</button>
+    </form>
 
     <h2>Login</h2>
-    <input id="login-username" placeholder="Username">
-    <input id="login-password" type="password" placeholder="Password">
-    <button id="login-btn">Login</button>
+    <form id="login-form">
+      <input id="login-username" placeholder="Username">
+      <input id="login-password" type="password" placeholder="Password">
+      <button type="submit">Login</button>
+    </form>
 
     <h2>Your Todos</h2>
-    <input id="todo-title" placeholder="Title">
-    <input id="todo-description" placeholder="Description">
-    <button id="add-todo-btn">Add Todo</button>
+    <form id="todo-form">
+      <input id="todo-title" placeholder="Title">
+      <input id="todo-description" placeholder="Description">
+      <button type="submit">Add Todo</button>
+    </form>
 
     <ul id="todo-list"></ul>
     <button id="logout-btn">Logout</button>
