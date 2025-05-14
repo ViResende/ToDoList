@@ -1,7 +1,18 @@
-document.getElementById('register-btn').addEventListener('click', register);
-document.getElementById('login-btn').addEventListener('click', login);
-document.getElementById('add-todo-btn').addEventListener('click', addTodo);
-document.getElementById('logout-btn').addEventListener('click', logout);
+document.getElementById('register-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  register();
+});
+
+document.getElementById('login-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  login();
+});
+
+document.getElementById('todo-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  addTodo();
+});
+
 
 async function register() {
   const username = document.getElementById('register-username').value;
@@ -40,6 +51,8 @@ async function login() {
       const data = await response.json();
       document.cookie = `authToken=${data.token}; path=/`;
       alert('Login successful!');
+      document.getElementById('register-form').style.display = 'none';
+document.getElementById('login-form').style.display = 'none';
       loadTodos();
     } else {
       const error = await response.json();
